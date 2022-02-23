@@ -1,0 +1,6 @@
+from binary_to_decimal import test_binary_to_decimal, test_binary_to_decimal_empty, test_binary_to_decimal_invalid
+
+
+test_binary_to_decimal_invalid()
+test_binary_to_decimal()
+test_binary_to_decimal_empty()
