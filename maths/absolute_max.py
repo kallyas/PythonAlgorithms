@@ -15,4 +15,4 @@ def absolute_max(numbers: list) -> int:
     for number in numbers:
         if abs(number) > abs(maximum):
             maximum = number
-    return maximum
+    return abs(maximum)
