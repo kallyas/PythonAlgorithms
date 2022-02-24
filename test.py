@@ -60,7 +60,7 @@ class TestConversions(unittest.TestCase):
         self.assertRaises(ValueError, decimal_to_hexa, '')
 
     def test_octal_to_decimal(self):
-        self.assertEqual(octal_to_decimal('8'), 8)
+        self.assertEqual(octal_to_decimal('43'), 35)
         self.assertEqual(octal_to_decimal('10'), 10)
         self.assertEqual(octal_to_decimal('15'), 15)
 
@@ -73,9 +73,9 @@ class TestConversions(unittest.TestCase):
         self.assertRaises(ValueError, octal_to_decimal, '')
 
     def test_decimal_to_octal(self):
-        self.assertEqual(decimal_to_octal(8), '8')
-        self.assertEqual(decimal_to_octal(10), '10')
-        self.assertEqual(decimal_to_octal(15), '15')
+        self.assertEqual(decimal_to_octal('8'), '10')
+        self.assertEqual(decimal_to_octal('10'), '12')
+        self.assertEqual(decimal_to_octal('175'), '257')
 
     def test_decimal_to_octal_invalid(self):
         self.assertRaises(ValueError, decimal_to_octal, 'abc')
@@ -85,7 +85,7 @@ class TestConversions(unittest.TestCase):
     def test_decimal_to_octal_empty(self):
         self.assertRaises(ValueError, decimal_to_octal, '')
 
-        
+
 
 
 if __name__ == '__main__':
