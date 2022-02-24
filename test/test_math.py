@@ -19,7 +19,7 @@ class TestMaths(unittest.TestCase):
         self.assertRaises(ValueError, absolute_max, [])
 
     def test_absolute_max_one_element(self):
-        self.assertEqual(absolute_max([-1]), -1)
+        self.assertEqual(absolute_max([-1]), 1)
         self.assertEqual(absolute_max([1]), 1)
 
     def test_absolute_max_one_element_zero(self):
@@ -33,18 +33,18 @@ class TestMaths(unittest.TestCase):
         self.assertEqual(absolute_min([345, 100, 679, 234, 567]), 100)
 
     def test_absolute_min_negatives(self):
-        self.assertEqual(absolute_min([-1, -2, -3, -4, -5]), -5)
-        self.assertEqual(absolute_min([-345, -100, -679, -234, -567]), -679)
+        self.assertEqual(absolute_min([-1, -2, -3, -4, -5]), 5)
+        self.assertEqual(absolute_min([-345, -100, -679, -234, -567]), 679)
 
     def test_absolute_min_mixed(self):
-        self.assertEqual(absolute_min([-1, 2, -3, 4, -5]), -5)
-        self.assertEqual(absolute_min([-345, 100, -679, 234, -567]), -679)
+        self.assertEqual(absolute_min([-1, 2, -3, 4, -5]), 5)
+        self.assertEqual(absolute_min([-345, 100, -679, 234, -567]), 679)
 
     def test_absolute_min_empty(self):
         self.assertRaises(ValueError, absolute_min, [])
 
     def test_absolute_min_one_element(self):
-        self.assertEqual(absolute_min([-1]), -1)
+        self.assertEqual(absolute_min([-1]), 1)
         self.assertEqual(absolute_min([1]), 1)
 
     def test_absolute_min_one_element_zero(self):
