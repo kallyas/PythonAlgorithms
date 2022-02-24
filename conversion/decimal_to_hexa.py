@@ -17,7 +17,7 @@ def decimal_to_hexa(number: int) -> str:
 
 def is_decimal(number: int) -> bool:
     # check if the number is a decimal number
-    if number not in range(0, 2 ** 31):
+    if not isinstance(number, int):
         return False
     else:
         return True

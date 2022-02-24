@@ -61,8 +61,8 @@ class TestConversions(unittest.TestCase):
 
     def test_octal_to_decimal(self):
         self.assertEqual(octal_to_decimal('43'), 35)
-        self.assertEqual(octal_to_decimal('10'), 10)
-        self.assertEqual(octal_to_decimal('15'), 15)
+        self.assertEqual(octal_to_decimal('10'), 8)
+        self.assertEqual(octal_to_decimal('15'), 13)
 
     def test_octal_to_decimal_invalid(self):
         self.assertRaises(ValueError, octal_to_decimal, 'abc')
