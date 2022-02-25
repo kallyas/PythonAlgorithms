@@ -13,3 +13,4 @@ def is_perfect_square(number: int) -> bool:
 
     root = int(sqrt(number))
     return root * root == number
+

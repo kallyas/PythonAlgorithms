@@ -2,13 +2,16 @@
 This program calculates an exponential using the fast exponential algorithm.
 """
 
+
 def fast_exponential(base: int, exponent: int) -> int:
     if not isinstance(base, int):
         raise ValueError("Invalid Base")
     if not isinstance(exponent, int):
         raise ValueError("Invalid Exponent")
     if exponent < 0:
-        raise ValueError("Invalid Exponent")
+        #    perform exponential for negative exponent
+        return 1 / fast_exponential(base, -exponent)
+
     if base == 0:
         return 0
     if exponent == 0:
